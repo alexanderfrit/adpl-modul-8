@@ -1,0 +1,10 @@
+target/
+bin/
+*.class
+.classpath
+.project
+.settings/
+.idea/
+*.iml
+Modul/
+SRS/
