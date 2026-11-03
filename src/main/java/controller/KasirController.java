@@ -20,8 +20,12 @@ public class KasirController {
                     return;
                 }
                 int jumlah = Integer.parseInt(view.getTextJumlah().getText());
+                if (jumlah > barang.getStokBarang()) {
+                    JOptionPane.showMessageDialog(view, "Gagal: Stok barang tidak mencukupi");
+                    return;
+                }
                 int total = barang.getHargaJual() * jumlah;
-                JOptionPane.showMessageDialog(view, "Total: Rp" + total);
+                JOptionPane.showMessageDialog(view, "Transaksi Berhasil! Total: Rp" + total);
             }
         });
     }
