@@ -1,11 +1,13 @@
 package main;
 
 import controller.KasirController;
+import model.TransaksiDAO;
 import view.KasirView;
 
 public class Main {
     public static void main(String[] args) {
         KasirView view = new KasirView();
-        new KasirController(view);
+        TransaksiDAO dao = new TransaksiDAO();
+        new KasirController(view, dao);
     }
 }
